@@ -52,13 +52,10 @@ export function Section5Research() {
           chain-of-thought settings.
         </p>
         <p>
-          Chen et al. (2025) extended the faithfulness question to extended-thinking models —
-          including OpenAI o1/o3, DeepSeek R1, and Claude 3.7 Extended Thinking.<Cite id="chen2025" />{' '}
-          The safety argument for these models often rests on the claim that longer, more detailed
-          reasoning enables better oversight. Chen et al. found that even in these models, key
-          factors influencing the final output were sometimes absent from the visible reasoning
-          trace, and that the thinking text was not a complete record of the computation that
-          produced the answer.
+          Chen et al. (2025) studied faithfulness in reasoning models including Claude 3.7 Sonnet
+          and DeepSeek R1, comparing them against non-reasoning baselines such as Claude 3.5 Sonnet
+          New and DeepSeek V3.<Cite id="chen2025" /> They found that reasoning traces often failed
+          to verbalize hints or other factors that influenced the final answer.
         </p>
         <p>
           The connection to alignment was made concrete by Greenblatt et al. (2024) in "Alignment

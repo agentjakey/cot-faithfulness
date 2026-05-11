@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-type SeriesKey = 'Math + Small Model' | 'Math + Large Model' | 'Commonsense + Large Model' | 'Biased Input (any model)'
+type SeriesKey = 'Math + Small Model' | 'Math + Large Model' | 'Commonsense + Large Model' | 'Biased Input — schematic'
 
 interface Series {
   points: [number, number][]
@@ -30,11 +30,11 @@ const DATA: Record<SeriesKey, Series> = {
     dashed: false,
     label: 'Commonsense + Large Model',
   },
-  'Biased Input (any model)': {
+  'Biased Input — schematic': {
     points: [[0, 0.52], [0.2, 0.52], [0.4, 0.51], [0.6, 0.53], [0.8, 0.52], [1.0, 0.52]],
     color: '#F59E0B',
     dashed: true,
-    label: 'Biased Input (any model)',
+    label: 'Biased Input — schematic',
   },
 }
 

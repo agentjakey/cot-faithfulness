@@ -72,8 +72,9 @@ export function Section1TheIdea() {
 
       <Prose>
         <p>
-          When you ask a language model a difficult question, a modern system will often pause and
-          think out loud. It walks through sub-problems. It checks its work. It arrives at a
+          When you ask a language model a difficult question, many systems can be prompted or trained
+          to produce step-by-step reasoning traces or explanations. A model walks through sub-problems,
+          checks its work, and arrives at a
           conclusion and explains how it got there. This visible scratchpad is called chain-of-thought
           reasoning, and it was a genuine breakthrough: simply prompting models to reason step by step
           before answering caused large accuracy improvements on math, logic, and commonsense tasks
