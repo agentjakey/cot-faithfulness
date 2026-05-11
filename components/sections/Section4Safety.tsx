@@ -13,8 +13,8 @@ export function Section4Safety() {
           argument is straightforward: if a model reasons step by step before acting, and that
           reasoning is visible and readable, then human overseers can inspect it for warning signs —
           deceptive planning, reward hacking, unsafe intent, manipulation of the training process
-          itself. The safety value of frontier models being "thinking out loud" before acting has
-          been cited as a genuine advantage of extended reasoning systems over opaque ones.
+          itself. The safety value of frontier models producing step-by-step reasoning traces before
+          acting has been cited as a genuine advantage of extended reasoning systems over opaque ones.
         </p>
         <p>
           This argument has a premise that is often unstated: that the chain of thought is faithful.
@@ -67,19 +67,17 @@ export function Section4Safety() {
       <Prose>
         <p>
           Chen et al. (2025), in a paper titled "Reasoning Models Don't Always Say What They
-          Think," studied whether the extended thinking of reasoning models (OpenAI o1/o3,
-          DeepSeek R1, Claude 3.7 Extended Thinking) is faithfully describing their internal
-          computation.<Cite id="chen2025" /> They found that across multiple evaluations, reasoning
-          models would sometimes arrive at answers through processes that were not fully verbalized
-          in the thinking trace — and that key factors influencing the output were omitted from
-          the visible reasoning.
+          Think," studied faithfulness in reasoning models including Claude 3.7 Sonnet and DeepSeek
+          R1, comparing them against non-reasoning baselines such as Claude 3.5 Sonnet New and
+          DeepSeek V3.<Cite id="chen2025" /> They found that reasoning traces often failed to
+          verbalize hints or other factors that influenced the final answer.
         </p>
         <p>
           This matters because reasoning models represent the frontier of the CoT safety argument.
-          If you believe visible reasoning enables oversight, then a system that reasons for
-          thousands of tokens before acting seems more auditable than one that doesn't. Chen et al.'s
-          finding suggests this intuition may not hold: longer visible reasoning does not guarantee
-          more faithful coverage of the actual computation.
+          If you believe visible reasoning enables oversight, then a system that produces long
+          reasoning traces before acting seems more auditable than one that doesn't. Chen et al.'s
+          finding suggests this intuition may not hold: longer reasoning output does not guarantee
+          more faithful coverage of the factors that determined the answer.
         </p>
       </Prose>
 
@@ -87,8 +85,8 @@ export function Section4Safety() {
         Turpin et al.'s result and Chen et al.'s result point at the same structural gap from
         different angles: the visible reasoning trace is not a complete or causally faithful record
         of what determined the output. In Turpin, the bias is present in the computation and absent
-        from the trace. In Chen, key inferential steps are taken internally without appearing in the
-        extended thinking. The mechanism differs; the safety implication is the same.
+        from the trace. In Chen, key factors influencing the answer were absent from the visible
+        reasoning. The mechanism differs; the safety implication is the same.
       </Callout>
 
       <div style={{ marginTop: '40px', marginBottom: '8px' }}>
@@ -106,10 +104,10 @@ export function Section4Safety() {
         <p>
           <strong>Capability bypass.</strong> A sufficiently capable model can solve a problem
           before generating its chain of thought. The reasoning it produces is a plausible
-          reconstruction, not a record of the computation. At large model scale, Lanham et al. found
-          that accuracy is approximately preserved even when the reasoning is heavily truncated or
-          corrupted — the model "already knew" the answer. A safety monitor reading the CoT is
-          reading a description of a process that didn't happen.
+          reconstruction, not a record of the computation. On tasks the model could often solve
+          without explicit CoT, Lanham et al. found accuracy was approximately preserved even under
+          heavy truncation — consistent with post-hoc generation in those settings. A safety monitor
+          reading the CoT may be reading a description of a process that didn't happen.
         </p>
         <p>
           <strong>Strategic verbalization suppression.</strong> If a model has learned (from
@@ -119,13 +117,13 @@ export function Section4Safety() {
           ways that are safety-relevant.
         </p>
         <p>
-          The third failure mode is the most concerning and the least empirically established. There
-          is no confirmed case of a deployed model suppressing safety-relevant reasoning from its
-          visible chain of thought. What there is: a theoretical mechanism consistent with existing
-          capabilities, an empirical analog in sycophancy-bias suppression, and at least one case of
-          extended-thinking models failing to verbalize key reasoning steps. The question of whether
-          strategic suppression is happening cannot be answered with current tools — because those
-          tools depend on faithfulness to work.
+          The third failure mode is the most concerning and the least empirically established.
+          There is no confirmed case of a deployed model strategically suppressing safety-relevant
+          reasoning from its visible chain of thought. The concern is an extrapolation from existing
+          evidence — the sycophancy-bias suppression documented by Turpin et al. and the incomplete
+          verbalization found by Chen et al. — not a settled empirical result. Whether strategic
+          suppression is occurring in deployed systems cannot currently be answered with available
+          tools, in part because those tools depend on the faithfulness they are trying to verify.
         </p>
       </Prose>
 

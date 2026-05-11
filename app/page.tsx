@@ -36,9 +36,10 @@ export default function Home() {
         <div className="max-w-[720px] mx-auto px-6 mb-12">
           <SectionHeading n={3}>Lab</SectionHeading>
           <p className="font-sans text-sm text-secondary border border-border rounded px-4 py-3 mb-8" style={{ lineHeight: 1.65 }}>
-            The visualizations below are synthetic teaching examples. They are not live model outputs
-            and the plotted values are schematic, chosen to illustrate the qualitative findings
-            reported in the literature.
+            The visualizations below are synthetic teaching examples. They are not live model
+            outputs, empirical measurements, or claims about any specific deployed model. The
+            plotted values are schematic, chosen to illustrate qualitative findings from the
+            literature.
           </p>
           <Lead>
             Three interactive visualizations of CoT faithfulness. The first shows the causal

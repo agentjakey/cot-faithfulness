@@ -136,11 +136,12 @@ export function Section2TheMath() {
           generation.
         </p>
         <p>
-          This gave rise to what they called the <strong>inverse scaling</strong> hypothesis for
-          faithfulness: as models grow more capable, they increasingly solve problems through direct
-          pattern-matching, then generate reasoning as a post-hoc description. Faithfulness may peak
-          at intermediate model scale, where the task is hard enough that the model genuinely needs
-          to reason through it.
+          This gave rise to what they called the <strong>inverse scaling hypothesis</strong> for
+          faithfulness: in their evaluations, models that could solve problems without CoT
+          increasingly generated reasoning that did not causally drive their outputs. Faithfulness
+          varied by model, task, and perturbation type — appearing to peak at intermediate scale in
+          some settings, where tasks are hard enough that the model genuinely needs to reason through
+          them. This is a hypothesis about an observed pattern, not a universal law.
         </p>
       </Prose>
 

@@ -109,9 +109,9 @@ export function Section6StartHere() {
             </span>
             <ColHeader>If you're new to AI</ColHeader>
             <ColText>
-              Every AI system that "thinks out loud" before answering — every chatbot that walks
-              you through its reasoning, every AI assistant that explains how it reached a
-              conclusion — has an invisible property that makes it harder to verify: the visible
+              Any AI system that produces step-by-step reasoning traces before answering — every
+              chatbot that walks you through its reasoning, every AI assistant that explains how it
+              reached a conclusion — has an invisible property that makes it harder to verify: the
               reasoning and the actual computation may not be the same thing. Understanding why
               this gap exists, and what it takes to close it, is one of the central questions for
               anyone who wants to know whether AI systems can be audited.

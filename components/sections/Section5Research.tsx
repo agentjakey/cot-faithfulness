@@ -35,11 +35,12 @@ export function Section5Research() {
           <Cite id="lanham2023" /> Rather than injecting biases, they removed reasoning. If the
           chain of thought causally produces the answer, removing it should harm accuracy. If the
           reasoning is post-hoc, accuracy should be stable. They found that faithfulness varied
-          substantially with model size and task difficulty, and proposed the inverse scaling
-          hypothesis: larger models, capable of solving problems without CoT, increasingly generate
-          reasoning that does not drive their outputs. Faithfulness, by their measures, showed a
-          non-monotonic relationship with model capability — peaking at intermediate scale,
-          declining for frontier models on tasks within their capacity.
+          substantially by model, task, and perturbation type, and proposed the inverse scaling
+          hypothesis: in their evaluations, models that could solve problems without CoT increasingly
+          generated reasoning that did not causally drive their outputs. Faithfulness, by their
+          measures, appeared to peak at intermediate scale in some settings — declining for frontier
+          models on tasks they could often solve without explicit reasoning. This is a hypothesis
+          about an observed pattern, not a universal claim.
         </p>
         <p>
           Methodologically, the most rigorous framework for measuring faithfulness uses causal
@@ -75,8 +76,9 @@ export function Section5Research() {
         faithfulness tests require either many inference calls or access to internal states. The
         second is whether faithfulness can be trained — no intervention has been shown to reliably
         restore faithful CoT at frontier scale. The third is whether strategic suppression of
-        safety-relevant reasoning is occurring in deployed systems, and if so, whether it is
-        detectable without the very faithfulness guarantees it would undermine.
+        safety-relevant reasoning is occurring in deployed systems; this is a speculative but
+        well-motivated concern, not a confirmed finding, and it may be undetectable without the very
+        faithfulness guarantees it would undermine.
       </Callout>
 
       <Prose>
