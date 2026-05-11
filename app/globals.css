@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Sora', var(--font-sora), sans-serif;
+    background-color: #FAFAF8;
+    color: #1A1915;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul,
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection {
+    background-color: #C2411C;
+    color: #FAFAF8;
+  }
+
+  * {
+    border-color: #E4E2DB;
+  }
+
+  [data-track] {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  body[data-audience] [data-track] {
+    opacity: 0.4;
+  }
+
+  body[data-audience="nontechnical"] [data-track="nontechnical"],
+  body[data-audience="technical"]    [data-track="technical"],
+  body[data-audience="researcher"]   [data-track="researcher"] {
+    opacity: 1;
+    background-color: rgba(194, 65, 28, 0.05);
+  }
+}
