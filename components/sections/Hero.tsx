@@ -59,13 +59,7 @@ export function Hero() {
           className="font-serif text-primary"
           style={{ fontSize: '19px', lineHeight: 1.85, marginTop: '40px' }}
         >
-          When you ask a language model a difficult question, many systems can be prompted
-          or trained to produce step-by-step reasoning traces or explanations. The model
-          walks through sub-problems, checks its work, and produces a conclusion along with
-          an account of how it got there. This kind of step-by-step output is called
-          chain-of-thought reasoning, and it was a genuine breakthrough. But a visible
-          reasoning process is not the same as a transparent one, and the gap between
-          them has consequences that go all the way to AI safety.
+          When a model shows you its reasoning, there is no guarantee that reasoning caused its answer.
         </motion.p>
 
         <motion.div

@@ -152,6 +152,15 @@ export function Section4Safety() {
           monitoring can and cannot guarantee — and a statement of how much work remains before
           those guarantees can be made.
         </p>
+        <p>
+          The most direct treatment of this question as a safety problem is Korbak et al. (2025),
+          "Chain of Thought Monitorability," which asks whether CoT can be made reliable enough to
+          serve as a genuine oversight tool.<Cite id="korbak2025" /> Their work frames
+          monitorability — the property that a model's visible reasoning faithfully reflects its
+          computations in safety-relevant ways — as a distinct target for alignment research,
+          separate from capability and separate from general interpretability. It is the closest the
+          field has come to specifying what faithful CoT would need to look like in practice.
+        </p>
       </Prose>
     </SectionWrapper>
   )

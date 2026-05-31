@@ -56,6 +56,13 @@ export const CITATIONS: CitationData[] = [
     venue: 'Anthropic',
     url: 'https://assets.anthropic.com/m/71876fabef0f0ed4/original/reasoning_models_paper.pdf',
   },
+  {
+    id: 'korbak2025',
+    authors: 'Korbak, T., et al.',
+    title: 'Chain of Thought Monitorability',
+    year: 2025,
+    url: 'https://arxiv.org/abs/2506.01679',
+  },
 ]
 
 export const citations = CITATIONS

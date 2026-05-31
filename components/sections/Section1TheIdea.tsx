@@ -109,6 +109,14 @@ export function Section1TheIdea() {
         </p>
       </Prose>
 
+      <Callout>
+        A note on scope: faithfulness is not a fixed property of a model. It varies with task
+        difficulty, model size, and whether the model could solve the problem without reasoning at
+        all. The evidence suggests larger models on easier tasks show less faithful CoT — not that
+        all models are always unfaithful. The goal is to know when and how much to trust the visible
+        reasoning, not to dismiss it entirely.
+      </Callout>
+
       <FaithfulDiagram />
       <UnfaithfulDiagram />
 
